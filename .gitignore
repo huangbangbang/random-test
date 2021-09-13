@@ -26,6 +26,7 @@ target/
 .idea/
 *.ipr
 *.iws
+*.txt
 
 # Android Studio Navigation editor temp files
 .navigation/
