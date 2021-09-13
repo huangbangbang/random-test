@@ -1,4 +1,4 @@
-package com.ysb.test.randomtest;
+package com.ysb.spi;
 
 public interface SPI {
     void execute();

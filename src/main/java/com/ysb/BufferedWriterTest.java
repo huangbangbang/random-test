@@ -1,13 +1,10 @@
-package com.ysb.test.randomtest;
+package com.ysb;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * @author: Mr.Huang
- */
-public class Test06 {
+public class BufferedWriterTest {
 
     public static void main(String[] args) throws IOException {
         //创建一个字符写入流对象。

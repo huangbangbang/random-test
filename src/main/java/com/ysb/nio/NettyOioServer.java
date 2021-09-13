@@ -1,4 +1,4 @@
-package com.ysb.test;
+package com.ysb.nio;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;

@@ -1,8 +1,8 @@
-package com.ysb.test.randomtest;
+package com.ysb;
 
-public class Test05 {
-    public static ThreadLocal threadLocal = new ThreadLocal();
-    public static ThreadLocal threadLocal1 = new ThreadLocal();
+public class ThreadLocalTest {
+    public static java.lang.ThreadLocal threadLocal = new java.lang.ThreadLocal();
+    public static java.lang.ThreadLocal threadLocal1 = new java.lang.ThreadLocal();
     public static void print(String s){
         System.out.println(s+" "+threadLocal.get());
     }

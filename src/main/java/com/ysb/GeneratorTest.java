@@ -1,8 +1,8 @@
-package com.ysb.test.randomtest;
+package com.ysb;
 
 import java.util.ArrayList;
 
-public class Test04 {
+public class GeneratorTest {
     public static void main(String[] args) {
         Generator generator = Generator.create(ArrayList.class);
         ArrayList next =(ArrayList) generator.next();

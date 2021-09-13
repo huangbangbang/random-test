@@ -1,4 +1,4 @@
-package com.ysb.test;
+package com.ysb.enumeration;
 
 public enum Season {
     SPRING(1,"春天","是春天啦"),

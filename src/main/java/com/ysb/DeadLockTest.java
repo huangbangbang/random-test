@@ -1,6 +1,6 @@
-package com.ysb.test.randomtest;
+package com.ysb;
 
-public class Test07 {
+public class DeadLockTest {
     public static void main(String[] args) {
         Integer integer1 = new Integer(1);
         Integer integer2 = new Integer(2);

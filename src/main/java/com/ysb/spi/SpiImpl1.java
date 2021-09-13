@@ -1,6 +1,6 @@
-package com.ysb.test.randomtest;
+package com.ysb.spi;
 
-public class SpiImpl1 implements SPI{
+public class SpiImpl1 implements SPI {
 
     @Override
     public void execute() {

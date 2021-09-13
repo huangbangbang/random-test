@@ -1,6 +1,8 @@
-package com.ysb.test;
+package com.ysb.enumeration;
 
-public class Test03 {
+import com.ysb.Constant;
+
+public class EnumTest {
     public static void main(String[] args) {
         System.out.println(Constant.NUM);
         System.out.println(Season.SPRING.getStatus());

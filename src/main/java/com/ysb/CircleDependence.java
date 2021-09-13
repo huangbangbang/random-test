@@ -1,9 +1,9 @@
-package com.ysb.test.randomtest;
+package com.ysb;
 
 /**
  * @author Administrator
  */
-public class Test01 {
+public class CircleDependence {
     public static void main(String[] args) {
         new A();
     }

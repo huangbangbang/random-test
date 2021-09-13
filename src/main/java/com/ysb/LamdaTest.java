@@ -1,4 +1,4 @@
-package com.ysb.test;
+package com.ysb;
 
 public class LamdaTest {
     public static void main(String[] args) {

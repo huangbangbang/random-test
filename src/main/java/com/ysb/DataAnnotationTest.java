@@ -1,11 +1,11 @@
-package com.ysb.test;
+package com.ysb;
 
 import com.alibaba.fastjson.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test02 {
+public class DataAnnotationTest {
     public static void main(String[] args) {
         User user = new User();
         user.setName("jack");

@@ -1,11 +1,11 @@
-package com.ysb.test.randomtest;
+package com.ysb.spi;
 
 import sun.misc.Service;
 import java.util.Iterator;
 import java.util.ServiceLoader;
 
 
-public class Test02 {
+public class SPITest {
     public static void main(String[] args) {
         Iterator<SPI> providers = Service.providers(SPI.class);
         ServiceLoader<SPI> load = ServiceLoader.load(SPI.class);

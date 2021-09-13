@@ -1,4 +1,4 @@
-package com.ysb.test;
+package com.ysb;
 
 import lombok.Data;
 
