@@ -40,15 +40,15 @@ class SyncBuyer implements OrderResult, Callable {
         //Thread thread = new Thread(new SyncBuyer(this.store, this.buyerName, this.goodName));
         thread.start();
         System.out.println(Thread.currentThread().getName() + "调用");
+        String goodsInfo = null;
         try {
-            String goodsInfo = (String) futureTask.get();
+            goodsInfo = (String) futureTask.get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-
-        String goodsInfo = store.returnOrderGoodsInfo(this);
+        //String goodsInfo = store.returnOrderGoodsInfo(this);
         myFeeling();
         return goodsInfo;
     }
