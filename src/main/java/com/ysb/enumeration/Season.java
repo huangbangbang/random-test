@@ -1,6 +1,7 @@
 package com.ysb.enumeration;
 
 public enum Season {
+
     SPRING(1,"春天","是春天啦"),
     SUMMER(2,"夏天","是夏天啦"),
     AUTUMN(3,"秋天","是秋天啦"),
