@@ -1,5 +1,8 @@
 package com.ysb;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class StreamTest {
     public static void main(String[] args) {
         byte[] a  ={65, 66, 67, 68};
