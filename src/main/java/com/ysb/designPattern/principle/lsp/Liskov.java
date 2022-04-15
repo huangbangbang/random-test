@@ -17,13 +17,13 @@ import java.math.BigDecimal;
  *
  *    Subtypes must be substitutable for their base types.
  *    简单来说，子类可以扩展父类的功能，但不能改变父类原有的功能。也就是说：当子类继承父类时，除添加新的方法且完成新增功能外，尽量不要重写父类的方法。这句话包括了四点含义：
- *   1.子类可以实现父类的抽象方法，但不能重写父类的非抽象方法。
- *   2.子类可以有自己独特的方法。
- *   3.当子类的方法重载父类的方法时，方法的前置条件（即方法的输入参数）要比父类的方法更宽松。
- *   4.当子类的方法实现父类的方法（重写、重载或实现抽象方法）时，方法的后置条件（即方法的输出或返回值）要比父类的方法更严格或与父类的方法相等。
- *   CashCard cashCard = new CashCard();
- *   CashCard cashCard = new CreditCard();
- *   两种方式要有一样的结果
+ *    1.子类可以实现父类的抽象方法，但不能重写父类的非抽象方法。
+ *    2.子类可以有自己独特的方法。
+ *    3.当子类的方法重载父类的方法时，方法的前置条件（即方法的输入参数）要比父类的方法更宽松。
+ *    4.当子类的方法实现父类的方法（重写、重载或实现抽象方法）时，方法的后置条件（即方法的输出或返回值）要比父类的方法更严格或与父类的方法相等。
+ *    CashCard cashCard = new CashCard();
+ *    CashCard cashCard = new CreditCard();
+ *    两种方式要有一样的结果
  */
 public class Liskov {
     public static void main(String[] args) {
