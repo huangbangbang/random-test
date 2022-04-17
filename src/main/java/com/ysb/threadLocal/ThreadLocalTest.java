@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * @author Huang Bangbang
  * @date 2022/4/17 - 12:58
+ * 理解理解ThreadLocal设计的目的和用处
  */
 public class ThreadLocalTest {
     public static void main(String[] args) {
