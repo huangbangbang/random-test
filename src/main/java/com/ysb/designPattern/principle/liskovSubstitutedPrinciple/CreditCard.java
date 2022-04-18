@@ -1,4 +1,4 @@
-package com.ysb.designPattern.principle.lsp;
+package com.ysb.designPattern.principle.liskovSubstitutedPrinciple;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

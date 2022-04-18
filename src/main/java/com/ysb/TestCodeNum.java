@@ -6,11 +6,11 @@ public class TestCodeNum {
 
     public static void main(String[] args) throws IOException {
         // java代码
-        int java_num = getProjectFileNumber(new File("D:\\IdeaProjects\\random-test\\src\\main\\java\\com\\ysb"), ".java");
+        int java_num = getProjectFileNumber(new File("/Users/huangbangbang/IdeaProjects/clinic-diag-admin/src/main/java/com/ysb"), ".java");
 
         // resource目录
         // xml
-        int xml_num = getProjectFileNumber(new File("D:\\NewIdeaProjects\\clinic-diag-admin\\src\\main\\resources\\mapper"), ".xml");
+        int xml_num = getProjectFileNumber(new File("/Users/huangbangbang/IdeaProjects/clinic-diag-admin/src/main/resources/mapper"), ".xml");
         // properties
         int properties_num = getProjectFileNumber(new File("D:\\lw\\work_space\\yxhd\\lcs\\lcs-service\\src\\main"), ".properties");
         System.out.println("java:" + java_num);

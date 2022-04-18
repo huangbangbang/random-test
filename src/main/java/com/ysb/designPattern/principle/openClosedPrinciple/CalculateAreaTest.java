@@ -1,4 +1,4 @@
-package com.ysb.designPattern.principle.ocp;
+package com.ysb.designPattern.principle.openClosedPrinciple;
 
 /**
  * @author Huang Bangbang
