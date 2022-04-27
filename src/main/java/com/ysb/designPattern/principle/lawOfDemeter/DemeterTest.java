@@ -1,6 +1,9 @@
 package com.ysb.designPattern.principle.lawOfDemeter;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * @author Huang Bangbang
@@ -34,5 +37,9 @@ public class DemeterTest {
         Principal principal = new Principal();
         Map<String, Object> classInfo = principal.getClassInfo();
         System.out.println(classInfo);
+
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6);
+        Stream<Integer> sorted = list.stream().sorted();
+        System.out.println(sorted);
     }
 }
