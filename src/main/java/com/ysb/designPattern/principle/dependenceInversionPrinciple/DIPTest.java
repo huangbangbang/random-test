@@ -16,6 +16,8 @@ import java.util.List;
  *   依赖倒置原则是指在设计代码架构时,高层模块不应该依赖于底层模块,二者都应该依赖于抽象.抽象不应该依赖于细节,细节应该依赖抽象.
  *   Java中面向抽象编程指的是面向接口或抽象类编程.接口作为一种行为的抽象,抽象类作为一种数据的抽象(子类的模版实现).
  *   本次的框架架构对比Java的集合框架(Collection Framework).
+ *   <img width="640" height="320" src="https://github.com/huangbangbang/random-test/blob/master/src/main/java/com/ysb/img.png" alt="">
+ *   <a href="https://github.com/huangbangbang/random-test/blob/master/src/main/java/com/ysb/img.png">继承关系图</a>
  *   发现了一个问题:
  *   例如: ArrayList继承了AbstractList抽象类,而AbstractList抽象类实现了List接口,那为什么ArrayList还要实现List接口？
  *        这个问题可以参考这个回答:
@@ -26,6 +28,7 @@ import java.util.List;
  *
  */
 public class DIPTest {
+
     public static void main(String[] args) {
         List<User> userList = new ArrayList<>();
         userList.add(new User(1001,"jack",70));
