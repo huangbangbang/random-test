@@ -9,8 +9,8 @@ import java.util.HashMap;
 
 public class JsonFormat {
     public static void main(String[] args) throws JsonProcessingException {
-        User user1 = new User(1,"jack");
-        User user2 = new User(2,"mary");
+        User user1 = new User(1,"jack",1);
+        User user2 = new User(2,"mary",2);
         ArrayList<User> list = new ArrayList<>();
         list.add(user1);
         list.add(user2);
