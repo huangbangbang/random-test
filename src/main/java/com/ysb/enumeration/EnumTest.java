@@ -15,5 +15,7 @@ public class EnumTest {
         System.out.println(Season.SPRING.name());
         System.out.println(Season.SPRING.ordinal());
 
+        FatherEnum.BUY.process();
+        FatherEnum.SELL.process();
     }
 }
