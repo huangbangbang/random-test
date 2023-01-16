@@ -2,6 +2,7 @@ package com.ysb;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -83,6 +85,22 @@ public class StreamTest {
             }
             System.out.println();
         }
+        System.out.println(String.valueOf(System.nanoTime()));
+
+
+        //System.out.println(Pattern.matches("^[A-Za-z0-9-]{4,35}$","SF1123456789123"));
+        //System.out.println(Pattern.matches("^JD[a-zA-Z0-9]{2}[0-9]{11}$|^JD[0-9]{13}$","JD1134512345123"));
+        System.out.println(Pattern.matches("^^[0-9]{7}$|^[0-9]{11}$|^KY[0-9]{13}$|^KYE[0-9]{12}$","KY1234567891234"));
+        System.out.println(Pattern.matches("^^[0-9]{7}$|^[0-9]{11}$|^KY[0-9]{13}$|^KYE[0-9]{12}$","12345678"));
+        System.out.println(Pattern.matches("^^[0-9]{7,11}$|^KY[0-9]{13}$|^KYE[0-9]{12}$","12345678"));
+
+        System.out.println(Pattern.matches("^JD[a-zA-Z0-9]{2}[0-9]{11}$|^JD[0-9]{13}$","JD1234512345123"));
+        System.out.println(Pattern.matches("^[0-9]{12}$|^SF[0-9]{13}","SF1234512345123"));
+
+        System.out.println(Pattern.matches("^JD[a-zA-Z0-9]{2}[0-9]{11}$","JDWW34512345123"));
+
+        System.out.println(new BigDecimal("-2000"));
+        System.out.println(new BigDecimal("2000"));
     }
 
 }
