@@ -1,12 +1,17 @@
 package com.ysb;
 
+import jdk.jfr.Unsigned;
+
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StringTest {
@@ -68,6 +73,19 @@ public class StringTest {
         now = now.minusMinutes(30);
         System.out.println(now);
 
+        String[] split = "1H|\\^&|||XC8001|||||LIS||SRLT|E1394-97|20160503143342{".split("\\|");
+        System.out.println(Arrays.asList(split));
 
+        //探究中文破折号——的字符编码
+        System.out.println(Integer.valueOf('-'));
+        System.out.println(Integer.valueOf('_'));
+        System.out.println(Integer.valueOf("——".charAt(0)));
+        System.out.println(Integer.valueOf("——".charAt(1)));
+        System.out.println(Integer.valueOf('—'));
+
+        //Java正则表达式去掉标点符号
+        String str = ",.!，，D_NAME。！；‘’”“**dfs  #$%^&()-+1431221\"\"中           国123漢字かどうかのjavaを決定";
+        str = str.replaceAll("[\\pP\\pS\\pZ]", "");
+        System.out.println(str);
     }
 }
