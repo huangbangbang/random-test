@@ -25,8 +25,8 @@ public class ServerTest {
             int second = inputStream.read();
             // 0 开头是消息包 1开头是心跳包
             int third = inputStream.read();
-            int lenth = (first << 8) + second;
-            byte[] buf = new byte[lenth];
+            int length = (first << 8) + second;
+            byte[] buf = new byte[length];
             String messageType = "";
             if (third > 127 ){
                 messageType = "heartbeat package";
