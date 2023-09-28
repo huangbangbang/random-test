@@ -4,9 +4,11 @@ package com.ysb.algorihm;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Test {
     public static void main(String[] args) {
@@ -52,6 +54,124 @@ public class Test {
         System.out.println("==========================");
         printArray(rightBoard);
 
+        String[] split = "dog cat cat dog".split("\\s+");
+        System.out.println(Arrays.asList("dog cat cat dog".split("\\s+")).toString());
+        System.out.println(isAnagram("anagram", "nagaram"));
+
+        String[] strings = new String[]{"abc","des","jghi"};
+        List<String> stringList = Arrays.stream(strings).sorted().collect(Collectors.toList());
+        String[] array =  stringList.toArray(new String[]{});
+        System.out.println(Arrays.asList(array).toString());
+
+        twoSum(new int[]{2,5,5,11},10);
+        //System.out.println(isHappy(2));
+
+        int[][] matrix = {{2, 1}, {4, 8}};
+        System.out.println(Arrays.asList(matrix).toString());
+
+    }
+
+
+
+
+    public static boolean isHappy(int n) {
+        int res = 0;
+        int initial = n;
+
+        if(n==1){
+            return true;
+        }
+
+        while(n!=1){
+            n = getLeft(n);
+
+            if(n==initial){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    private static int getLeft(int n){
+        if(n==0){
+            return 0;
+        }
+        return (n%10)*(n%10) + getLeft(n/10);
+    }
+    public  static int[] twoSum(int[] nums, int target) {
+
+        int[] res = new int[2];
+        int left  = 0;
+        int right = nums.length-1;
+        int[][] record = new int[nums.length][2];
+
+
+        Map<Integer,Integer> map = new HashMap();
+        for(int i = 0;i<nums.length;i++){
+            record[i][0] = nums[i];
+            record[i][1] = i;
+        }
+
+        Arrays.sort(nums);
+
+        while(left < right){
+
+            int sum = nums[left] + nums[right] ;
+            if(sum == target){
+                for(int i = 0;i<nums.length;i++){
+                    if(record[i][0] == nums[left] && record[i][1] >=0){
+                        res[0] = record[i][1];
+                        record[i][1] = -1;
+                        break;
+                    }
+                }
+                for(int i = 0;i<nums.length;i++){
+                    if(record[i][0] == nums[right] && record[i][1] >=0){
+                        res[1] = record[i][1];
+                        record[i][1] = -1;
+                        break;
+                    }
+                }
+                return res;
+            }else if(sum > target){
+                right -- ;
+            }else {
+                left ++ ;
+            }
+        }
+
+        return res;
+    }
+
+    public static boolean isAnagram(String s, String t) {
+
+        char[] sCharArray = s.toCharArray();
+        char[] tCharArray = t.toCharArray();
+
+        if(sCharArray.length!=tCharArray.length){
+            return false;
+        }
+
+        Map<Character,Integer> map = new HashMap();
+
+        for(int i = 0; i < sCharArray.length; i++){
+            map.put(sCharArray[i],map.getOrDefault(sCharArray[i],0)+1);
+            map.put(tCharArray[i],map.getOrDefault(tCharArray[i],0)-1);
+            if(map.get(sCharArray[i])==0){
+                map.remove(sCharArray[i]);
+            }
+
+            if(map.get(tCharArray[i])!=null && map.get(tCharArray[i])==0){
+                map.remove(tCharArray[i]);
+            }
+        }
+
+        if(map.isEmpty()){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public static void gameOfLife(int[][] board) {
