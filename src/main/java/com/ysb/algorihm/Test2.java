@@ -16,6 +16,12 @@ public class Test2 {
          * 二维数组传入一个比较器也可以进行排序
          */
         int[][] matrix = {{1, 3}, {0, 2}, {2, 3}, {4, 6}, {4, 5}, {5, 5}, {0, 2}, {3, 3}};
+//        List<int[]> intList = Arrays.asList(matrix);
+//        for (int[] array : intList) {
+//            for (int i : array) {
+//                System.out.println(i);
+//            }
+//        }
         Arrays.sort(matrix, (o1, o2) -> {
             if (o1[0] == o2[0]){
                 return o1[1] - o2[1];
